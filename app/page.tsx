@@ -1,5 +1,6 @@
 import FeaturedSection from "@/components/FeaturedSection";
 import HeroSection from "@/components/HeroSection";
+import ImpressiveSection from "@/components/ImpressiveSection";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <main className="min-h-screen w-full bg-black/96 antialiased bg-grid-white[0.02]">
         <HeroSection />
         <FeaturedSection />
+        <ImpressiveSection />
       </main>
     </div>
   );
