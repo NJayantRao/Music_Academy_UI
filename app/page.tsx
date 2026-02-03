@@ -1,6 +1,7 @@
 import FeaturedSection from "@/components/FeaturedSection";
 import HeroSection from "@/components/HeroSection";
 import ImpressiveSection from "@/components/ImpressiveSection";
+import MovingCards from "@/components/MovingCards";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <HeroSection />
         <FeaturedSection />
         <ImpressiveSection />
+        <MovingCards />
       </main>
     </div>
   );
