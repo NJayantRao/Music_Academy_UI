@@ -2,6 +2,8 @@ import FeaturedSection from "@/components/FeaturedSection";
 import HeroSection from "@/components/HeroSection";
 import ImpressiveSection from "@/components/ImpressiveSection";
 import MovingCards from "@/components/MovingCards";
+import WavyBg from "@/components/Instructors";
+import Webinars from "@/components/Webinars";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
         <FeaturedSection />
         <ImpressiveSection />
         <MovingCards />
+        <Webinars />
+        <WavyBg />
       </main>
     </div>
   );
