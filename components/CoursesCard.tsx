@@ -6,56 +6,57 @@ import Image from "next/image";
 
 const CoursesCard = () => {
   return (
-    <div className="min-h-screen bg-black py-12 pt-36">
-      <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white">
+    <div className="min-h-screen bg-background py-12 pt-36 relative">
+      <div className="absolute inset-0 w-full h-full bg-background [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+      <h1 className="text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white relative z-10">
         All courses ({courseData.courses.length})
       </h1>
-      <div className="flex flex-wrap gap-8 justify-center">
+      <div className="flex flex-wrap gap-8 justify-center max-w-7xl mx-auto px-4 relative z-10">
         {courseData.courses.map((course) => {
           return (
             <CardContainer key={course.id} className="inter-var">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+              <CardBody className="bg-zinc-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-violet-500/[0.1] dark:bg-zinc-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-3xl p-8 border hover:border-violet-500/40 transition-colors duration-500">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                  className="text-2xl font-bold text-neutral-600 dark:text-white font-sans tracking-tight"
                 >
                   {course.title}
                 </CardItem>
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  className="text-neutral-500 text-sm max-w-sm mt-4 dark:text-neutral-400 leading-relaxed tracking-wide"
                 >
                   {course.description}
                 </CardItem>
                 <CardItem
                   translateZ="100"
-                  rotateX={20}
-                  rotateZ={-10}
-                  className="w-full mt-4"
+                  rotateX={5}
+                  rotateZ={-2}
+                  className="w-full mt-8"
                 >
                   <Image
                     src={course.image}
                     height="1000"
                     width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    className="h-64 w-full object-cover rounded-2xl group-hover/card:shadow-xl shadow-black/50"
                     alt="thumbnail"
                   />
                 </CardItem>
-                <div className="flex justify-between items-center mt-15">
+                <div className="flex justify-between items-center mt-12">
                   <CardItem
                     translateZ={20}
                     as="button"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    className="px-6 py-3 rounded-full text-xs font-semibold dark:text-white hover:text-violet-400 transition-colors uppercase tracking-widest cursor-pointer"
                   >
                     Try now →
                   </CardItem>
                   <CardItem
                     translateZ={20}
                     as="button"
-                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                    className="px-8 py-3 rounded-full bg-black dark:bg-white dark:text-black text-white text-xs font-bold hover:bg-violet-500 hover:text-white dark:hover:bg-violet-500 dark:hover:text-white transition-all duration-300 shadow-lg hover:shadow-violet-500/20 cursor-pointer"
                   >
-                    Sign up
+                    Enroll Now
                   </CardItem>
                 </div>
               </CardBody>

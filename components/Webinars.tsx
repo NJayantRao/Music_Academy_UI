@@ -44,23 +44,25 @@ const webinars = [
 
 const Webinars = () => {
   return (
-    <div className="p-12 bg-gray-900">
+    <div className="py-20 bg-background relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center">
-          <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">
+        <div className="text-center mb-16">
+          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
             FEATURED WEBINARS
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
             Enhance Your Musical Journey
           </p>
         </div>
-        <HoverEffect items={webinars} />
-        <div className="mt-10 text-center">
+        <div className="max-w-5xl mx-auto px-8">
+          <HoverEffect items={webinars} />
+        </div>
+        <div className="mt-16 text-center">
           <Link
             href={"/"}
-            className="px-4 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200"
+            className="px-6 py-3 rounded-full border border-neutral-600 text-neutral-300 hover:bg-neutral-800 transition duration-300 font-medium"
           >
-            View All webinars
+            View All Webinars
           </Link>
         </div>
       </div>

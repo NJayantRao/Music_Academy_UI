@@ -62,7 +62,7 @@ const WavyBg = () => {
       <WavyBackground
         colors={colors}
         waveWidth={30}
-        backgroundFill="black"
+        backgroundFill="#09090B" // Zinc 950 to match theme
         blur={8}
         speed="slow"
         waveOpacity={0.5}

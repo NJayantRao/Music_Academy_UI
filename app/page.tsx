@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="min-h-screen w-full bg-black/96 antialiased bg-grid-white[0.02]">
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <main className="min-h-screen w-full relative overflow-hidden">
         <HeroSection />
         <FeaturedSection />
         <ImpressiveSection />
